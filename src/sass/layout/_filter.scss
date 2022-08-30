@@ -1,0 +1,41 @@
+.filter-container {
+  max-width: 360px;
+  padding: 32px;
+  margin-bottom: 56px;
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.type-container,
+.capacity-container {
+  margin-bottom: 56px;
+}
+
+.filter-header {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #94a7cb;
+  margin-bottom: 28px;
+}
+
+.form-check,
+.price__max {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
+}
+
+.filter__quantity {
+  font-weight: 500;
+  color: #90a3bf;
+}
+
+.price__range {
+  width: 296px;
+}

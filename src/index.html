@@ -1,14 +1,591 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
+    <title>Car Rent Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./sass/main.scss" />
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-md navbar-light">
+      <div class="container-fluid g-0 navbar__top">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item nav-link__button">
+              <a href="" class="link nav-link">
+                <svg class="nav-list__icon">
+                  <use href="./images/icons.svg#icon-heart"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item nav-link__button">
+              <a href="" class="link nav-link">
+                <svg class="nav-list__icon" width="60">
+                  <use href="./images/icons.svg#icon-notification1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item nav-link__button">
+              <a href="" class="link nav-link">
+                <svg class="nav-list__icon">
+                  <use href="./images/icons.svg#icon-setting"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <a href="" class="link">
+          <picture>
+            <source
+              srcset="
+                ./images/profile/profile.jpg    1x,
+                ./images/profile/profile-2x.jpg 2x
+              "
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="
+                ./images/profile/profile-mobile.jpg    1x,
+                ./images/profile/profile-mobile-2x.jpg 2x
+              "
+              media="(min-width: 320px)"
+            />
+            <img
+              src="./images/profile/profile.jpg"
+              alt="profile picture"
+              class=""
+            />
+          </picture>
+        </a>
+      </div>
+      <div>
+        <div class="navbar__main-container">
+          <a class="navbar-brand" href="#">MORENT</a>
+          <form class="d-flex search">
+            <input
+              class="search__input"
+              type="text"
+              placeholder="Search something here"
+              name="search"
+            />
+            <button class="search__button" type="submit">
+              <svg class="search__icon">
+                <use href="./images/icons.svg#icon-search"></use>
+              </svg>
+            </button>
+            <button class="search__filter" type="submit">
+              <svg class="filter__icon">
+                <use href="./images/icons.svg#icon-filter"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Main section -->
+    <div class="d-flex">
+      <!-- Filter -->
+      <aside>
+        <div class="filter-container">
+          <!-- Type-container -->
+          <div class="type-container">
+            <h2 class="filter-header">TYPE</h2>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+                checked
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                Sport <span class="filter__quantity">(10)</span>
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+                checked
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                SUV <span class="filter__quantity">(12)</span>
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label class="form-check-label" for="flexCheckDefault">
+                MPV <span class="filter__quantity">(16)</span>
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label class="form-check-label" for="flexCheckDefault">
+                Sedan <span class="filter__quantity">(20)</span>
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label class="form-check-label" for="flexCheckDefault">
+                Coupe <span class="filter__quantity">(14)</span>
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label class="form-check-label" for="flexCheckDefault">
+                Hatchback <span class="filter__quantity">(14)</span>
+              </label>
+            </div>
+          </div>
+          <!-- Capacity-container -->
+          <div class="capacity-container">
+            <h2 class="filter-header">CAPACITY</h2>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+                checked
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                2 Person <span class="filter__quantity">(10)</span>
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+                checked
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                4 Person <span class="filter__quantity">(14)</span>
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+                checked
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                6 Person <span class="filter__quantity">(12)</span>
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+                checked
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                8 or More <span class="filter__quantity">(16)</span>
+              </label>
+            </div>
+          </div>
+          <!-- Price-container -->
+          <div class="price-container">
+            <h2 class="filter-header">PRICE</h2>
+            <input
+              type="range"
+              class="default-range price__range"
+              id="priceRange"
+            />
+            <p class="price__max">Max. $100.00</p>
+          </div>
+        </div>
+      </aside>
+      <div class="main-container">
+        <!-- CarDetails -->
+        <div class="car-details-container">
+          <div class="car-images-container">
+            <div class="card images-card bg-dark text-white">
+              <picture>
+                <source
+                  srcset="
+                    ./images/cars/nissan/nissan.jpg    1x,
+                    ./images/cars/nissan/nissan-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/cars/nissan/nissan-mobile.jpg    1x,
+                    ./images/cars/nissan/nissan-mobile-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="card-img rounded-start"
+                  src="./images/cars/nissan/nissan.jpg"
+                  alt="Car picture"
+                />
+              </picture>
+              <div class="card-img-overlay">
+                <h5 class="card-title">
+                  Sports car with the best design and acceleration
+                </h5>
+                <p class="card-text">
+                  Safety and comfort while driving a futuristic and elegant
+                  sports car
+                </p>
+              </div>
+            </div>
+            <ul class="car-views list">
+              <li class="car-views__item selected">
+                <a href="" class="link">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/cars/nissan/nissan-view1.jpg    1x,
+                        ./images/cars/nissan/nissan-view1-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/cars/nissan/nissan-view1-mobile.jpg    1x,
+                        ./images/cars/nissan/nissan-view1-mobile-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      class="rounded-start"
+                      src="./images/cars/nissan/nissan-view1.jpg"
+                      alt="Car picture"
+                    />
+                  </picture>
+                </a>
+              </li>
+              <li class="car-views__item">
+                <a href="" class="link">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/cars/nissan/nissan-view2.jpg    1x,
+                        ./images/cars/nissan/nissan-view2-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/cars/nissan/nissan-view2-mobile.jpg    1x,
+                        ./images/cars/nissan/nissan-view2-mobile-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      class="rounded-start"
+                      src="./images/cars/nissan/nissan-view2.jpg"
+                      alt="Car picture"
+                    /> </picture
+                ></a>
+              </li>
+              <li class="car-views__item">
+                <a href="" class="link">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/cars/nissan/nissan-view3.jpg    1x,
+                        ./images/cars/nissan/nissan-view3-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/cars/nissan/nissan-view3-mobile.jpg    1x,
+                        ./images/cars/nissan/nissan-view3-mobile-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      class="rounded-start"
+                      src="./images/cars/nissan/nissan-view3.jpg"
+                      alt="Car picture"
+                    /> </picture
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="card main-card">
+            <div class="card-body">
+              <div class="main-card__header">
+                <h5 class="card-title">Card title</h5>
+                <button class="cars__heart" type="submit">
+                  <svg class="heart__icon1 cars-icon liked">
+                    <use href="./images/icons.svg#icon-heart1"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="card-rating-container">
+                <ul class="list d-flex" id="card-rating"></ul>
+                <p class="card__review">440+ Reviewer</p>
+              </div>
+              <p class="card-text">
+                NISMO has become the embodiment of Nissan's outstanding
+                performance, inspired by the most unforgiving proving ground,
+                the "race track".
+              </p>
+              <ul class="specification list">
+                <li class="specification__item d-flex">
+                  <span class="specification__label">TypeCar</span
+                  ><span class="specification__value">Sport</span>
+                </li>
+                <li class="specification__item d-flex">
+                  <span class="specification__label">Capacity</span
+                  ><span class="specification__value">2 person</span>
+                </li>
+                <li class="specification__item d-flex">
+                  <span class="specification__label">Steering</span>
+                  <span class="specification__value">Manual</span>
+                </li>
+                <li class="specification__item d-flex">
+                  <span class="specification__label">Gasoline</span>
+                  <span class="specification__value">70L</span>
+                </li>
+              </ul>
+              <div class="card__bottom">
+                <div class="card-price">
+                  <div class="card-price__new">
+                    $80.00/ <span class="card-price__days">days</span>
+                  </div>
+                  <div class="card-price__old">$100.00</div>
+                </div>
+                <button type="button" class="btn btn-primary rent-button">
+                  Rent Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Reviews -->
+        <div class="reviews-container">
+          <div class="reviews__header d-flex">
+            <h2 class="reviews__title">Reviews</h2>
+            <button class="btn btn-primary reviews__total">13</button>
+          </div>
+          <ul class="list reviews">
+            <li class="reviews__item">
+              <div class="reviews__general-info">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/reviews/reviewer1.jpg    1x,
+                      ./images/reviews/reviewer1-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    class="reviews__img"
+                    src="./images/reviews/reviewer1.jpg"
+                    alt="Reviewer picture"
+                  />
+                </picture>
+                <div>
+                  <div class="reviews__name">Alex Stanton</div>
+                  <div class="reviews__position">CEO at Bukalapak</div>
+                </div>
+              </div>
+              <div>
+                <div class="reviews__date">21 July 2022</div>
+                <ul class="list d-flex" id="reviews__rating1"></ul>
+              </div>
+              <div class="reviews__text">
+                We are very happy with the service from the MORENT App. Morent
+                has a low price and also a large variety of cars with good and
+                comfortable facilities. In addition, the service provided by the
+                officers is also very friendly and very polite.
+              </div>
+            </li>
+            <li class="reviews__item">
+              <div class="reviews__general-info">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/reviews/reviewer2.jpg    1x,
+                      ./images/reviews/reviewer2-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    class="reviews__img"
+                    src="./images/reviews/reviewer2.jpg"
+                    alt="Reviewer picture"
+                  />
+                </picture>
+                <div>
+                  <div class="reviews__name">Skylar Dias</div>
+                  <div class="reviews__position">CEO at Amazon</div>
+                </div>
+              </div>
+              <div>
+                <div class="reviews__date">20 July 2022</div>
+                <ul class="list d-flex" id="reviews__rating2"></ul>
+              </div>
+              <div class="reviews__text">
+                We are greatly helped by the services of the MORENT Application.
+                Morent has low prices and also a wide variety of cars with good
+                and comfortable facilities. In addition, the service provided by
+                the officers is also very friendly and very polite.
+              </div>
+            </li>
+          </ul>
+          <div class="button-container d-flex justify-content-center">
+            <button
+              class="reviews__show d-flex"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseExample"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              <p>Show All</p>
+              <svg class="arrow-down__icon">
+                <use href="./images/icons.svg#icon-arrow-down"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">Loading reviews ...</div>
+          </div>
+        </div>
+        <!-- Recent Car -->
+        <div class="cars-main-container">
+          <div class="cars__main-header">
+            <p class="recent__title">Recent Car</p>
+            <a class="cars__view-all">View All</a>
+          </div>
+          <ul class="recent__list list cars d-flex"></ul>
+        </div>
+        <!-- Recomendation Car -->
+        <div class="cars-main-container">
+          <div class="cars__main-header">
+            <p class="recomendation__title">Recomendation Car</p>
+            <a class="cars__view-all">View All</a>
+          </div>
+          <ul class="recomendation__list list cars d-flex"></ul>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-main-container">
+        <div class="footer__info">
+          <a class="navbar-brand" href="#">MORENT</a>
+          <p>
+            Our vision is to provide convenience and help increase your sales
+            business.
+          </p>
+        </div>
+        <div class="footer__menu">
+          <div class="footer__about footer__menu-block">
+            <h3 class="footer__title">About</h3>
+            <ul class="list footer__nav">
+              <li>
+                <a href="">How it works</a>
+              </li>
+              <li>
+                <a href="">Featured</a>
+              </li>
+              <li>
+                <a href="">Partnership</a>
+              </li>
+              <li>
+                <a href="">Bussiness Relation</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__socials footer__menu-block">
+            <h3 class="footer__title">Socials</h3>
+            <ul class="list footer__nav">
+              <li>
+                <a href="">Discord</a>
+              </li>
+              <li>
+                <a href="">Instagram</a>
+              </li>
+              <li>
+                <a href="">Twitter</a>
+              </li>
+              <li>
+                <a href="">Facebook</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__community footer__menu-block">
+            <h3 class="footer__title">Community</h3>
+            <ul class="list footer__nav">
+              <li>
+                <a href="">Events</a>
+              </li>
+              <li>
+                <a href="">Blog</a>
+              </li>
+              <li>
+                <a href="">Podcast</a>
+              </li>
+              <li>
+                <a href="">Invite a friend</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom-container">
+        <div class="footer__privacy-terms">
+          <a class="link" href="">Privacy & Policy</a>
+          <a class="link footer__terms" href="">Terms & Condition</a>
+        </div>
+        <p class="footer__rights">©2022 MORENT. All rights reserved</p>
+      </div>
+    </footer>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>

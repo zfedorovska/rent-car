@@ -1,0 +1,194 @@
+.cars-main-container {
+  max-width: 327px;
+  margin-bottom: 24px;
+  @media screen and (min-width: $tablet) {
+    max-width: 1016px;
+  }
+}
+
+.cars__main-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  line-height: 1.29;
+  color: #90a3bf;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 1.25;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-bottom: 16px;
+  }
+}
+
+.recomendation__title {
+  color: $primary;
+}
+
+.cars__view-all {
+  color: $primary;
+}
+
+.cars__item {
+  flex-basis: calc(100% / 3 - 19px);
+  margin-right: 19px;
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc(100% / 3 - 32px);
+    margin-right: 32px;
+  }
+}
+
+.cars__item .card {
+  width: 240px;
+  height: 286px;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 10px;
+  @media screen and (min-width: $tablet) {
+    width: 317px;
+    height: 388px;
+    padding: 24px;
+  }
+}
+
+.cars__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cars__item .card-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--title-text-color);
+  @media screen and (min-width: $tablet) {
+    font-size: 20px;
+  }
+}
+
+.cars__item .card-subtitle {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.25;
+  color: var(--subtitle-text-color);
+  margin-bottom: 20px;
+  @media screen and (min-width: $tablet) {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.29;
+    margin-bottom: 35px;
+  }
+}
+
+.cars__heart {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+}
+
+.cars__item .thumb > img {
+  display: block;
+  height: 64px;
+  width: 100%;
+  @media screen and (min-width: $tablet) {
+    height: 120px;
+  }
+}
+
+.cars__item img {
+  object-fit: contain;
+  margin-bottom: 40px;
+  @media screen and (min-width: $tablet) {
+    height: 28px;
+  }
+}
+
+.cars__item .card-body {
+  padding: 0;
+}
+
+.cars__specifications {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 32px;
+  }
+}
+
+.specifications__item {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.25;
+  color: var(--subtitle-text-color);
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 1.29;
+  }
+}
+
+.specifications__item:not(:last-child) {
+  margin-right: 16px;
+  @media screen and (min-width: $tablet) {
+    margin-right: 17px;
+  }
+}
+
+.heart__icon1 {
+  width: 24px;
+  height: 24px;
+}
+
+.cars-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+  @media screen and (min-width: $tablet) {
+    margin-right: 8px;
+  }
+}
+
+.cars__item .card-price__new {
+  font-size: 16px;
+  line-height: 1.25;
+  @media screen and (min-width: $tablet) {
+    font-size: 20px;
+  }
+}
+
+.cars__item .card-price__days,
+.cars__item .card-price__old {
+  font-size: 12px;
+  line-height: 1.29;
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+  }
+}
+
+.cars__item .card-price__old {
+  text-decoration: line-through;
+}
+
+.cars__item .rent-button {
+  min-width: 100px;
+  padding: 10px 16px;
+  @media screen and (min-width: $tablet) {
+    min-width: 116px;
+  }
+}
+
+.liked {
+  fill: #ed3f3f;
+  stroke-width: 0;
+}
+
+.empty-like {
+  fill: transparent;
+}

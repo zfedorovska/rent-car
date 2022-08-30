@@ -1,0 +1,14 @@
+@import './abstracts/variables';
+@import '~bootstrap/scss/bootstrap';
+@import './abstracts/css-variables';
+@import './base/common.scss';
+@import './base/reset.scss';
+@import './utils/breakpoints';
+@import './utils/hidden';
+@import './layout/_logo.scss';
+@import './layout/_navbar.scss';
+@import './layout/_filter.scss';
+@import './layout/_main-card';
+@import './layout/reviews';
+@import './layout/_cars';
+@import './layout/footer';

@@ -1,0 +1,138 @@
+.reviews-container {
+  background-color: #fff;
+  padding: 16px;
+  margin-bottom: 32px;
+  @media screen and (min-width: $tablet) {
+    // max-width: 1016px;
+    padding: 24px;
+  }
+}
+
+.reviews__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 51px;
+  }
+}
+
+.reviews__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--title-text-color);
+  margin-right: 12px;
+}
+
+.reviews__total {
+  min-width: 44px;
+  padding: 6px, 12px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.29;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.reviews__item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 24px;
+  }
+}
+
+.reviews__general-info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.reviews__img {
+  width: 44px;
+  margin-right: 8px;
+  @media screen and (min-width: $tablet) {
+    width: 56px;
+    margin-right: 16px;
+  }
+}
+
+.reviews__name {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--title-text-color);
+  margin-bottom: 8px;
+  @media screen and (min-width: $tablet) {
+    font-weight: 700;
+    font-size: 20px;
+  }
+}
+
+.reviews__position {
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: #90a3bf;
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.29;
+  }
+}
+
+.reviews__date {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.25;
+  text-align: right;
+  color: #90a3bf;
+  margin-bottom: 8px;
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 1.28;
+  }
+}
+
+.reviews__text {
+  font-size: 12px;
+  letter-spacing: -0.02em;
+  line-height: 2;
+  padding-left: 52px;
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    padding-left: 72px;
+  }
+}
+
+.reviews__show {
+  min-width: 130px;
+  border: none;
+  background-color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #90a3bf;
+  @media screen and (min-width: $tablet) {
+    max-width: 132px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.arrow-down__icon {
+  margin-left: 8px;
+  width: 14px;
+  height: 14px;
+  @media screen and (min-width: $tablet) {
+    width: 16px;
+    height: 16px;
+  }
+}
