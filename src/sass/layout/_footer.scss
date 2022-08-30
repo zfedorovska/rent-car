@@ -70,15 +70,21 @@
 }
 
 .footer__about {
-  order: 1;
+    @media screen and (min-width: $tablet) {
+      order: 1;
+  }
 }
 
 .footer__community {
-  order: 2;
+  @media screen and (min-width: $tablet) {
+      order: 2;
+  }
 }
 
 .footer__socials {
-  order: 3;
+  @media screen and (min-width: $tablet) {
+      order: 3;
+  }
 }
 
 .footer__menu .footer__title {
